@@ -4,7 +4,7 @@
 import streamlit as st
 from openai import OpenAI
 
-modelo = OpenAI(api_key='AQ.Ab8RN6LsOMyyVxY4sr6CxYT7G60ihNISg2EFESsALYB1esOEfw',
+modelo = OpenAI(api_key=st.secrets["GEMINI_API_KEY"],
                 base_url='https://generativelanguage.googleapis.com/v1beta/openai')
 
 #titulo
