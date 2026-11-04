@@ -1,10 +1,12 @@
 
 
 #pip install streamlit openai
+import os
 import streamlit as st
 from openai import OpenAI
+api_key = os.environ.get("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 
-modelo = OpenAI(api_key=st.secrets["GEMINI_API_KEY"],
+modelo = OpenAI(api_key=api_key,
                 base_url='https://generativelanguage.googleapis.com/v1beta/openai')
 
 #titulo
